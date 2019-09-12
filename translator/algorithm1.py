@@ -3,7 +3,6 @@
 """
 
 def alg1(input):
-    #input="훈민 정음"
     n=len(input)
     result=""
     for i in range(n):
@@ -15,6 +14,3 @@ def alg1(input):
             z=x
         result=result+z
     return result
-
-#a=alg1("훈민정음")
-#print(a)

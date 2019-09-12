@@ -1,0 +1,39 @@
+{% extends 'translator/base.html' %}
+
+{% block content %}
+
+<div class="card-group">
+
+    <div class="card bg-light mb-3" style="max-width: 18rem;">
+      <a href="{% url 'translator1' %}" style="text-decoration:none">
+        <div class="card-header">뷁민정음1</div>
+        <div class="card-body">
+          <h4 class="card-title">받침 넣기</h4>
+          <p class="card-text">한국인엗겓 받칩닏닫</p>
+        </div>
+      </a>
+    </div>
+
+  <div class="card text-white bg-secondary mb-3" style="max-width: 18rem;">
+    <a href="{% url 'translator2' %}">
+      <div class="card-header">뷁민정음2</div>
+      <div class="card-body">
+        <h4 class="card-title">된소리 되기</h4>
+        <p class="card-text">쒸프트키까 안빠쪄요</p>
+      </div>
+    </a>
+  </div>
+
+  <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
+    <a href="{% url 'translator3' %}">
+      <div class="card-header">뷁민정음3</div>
+      <div class="card-body">
+        <h4 class="card-title">자모 분리</h4>
+        <p class="card-text">ㅎㅏㄴㄱㅡㄹㅇㅡㅣㅇㅜㅣㄷㅐㅎㅏㅁ</p>
+      </div>
+    </a>
+  </div>
+
+</div>
+
+{% endblock %}

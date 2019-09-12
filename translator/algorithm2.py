@@ -3,7 +3,6 @@
 """
 
 def alg2(input):
-    #input="훈민 정음"
     n=len(input)
     result=""
     for i in range(n):

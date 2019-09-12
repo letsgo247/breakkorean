@@ -3,7 +3,6 @@
 """
 
 def alg3(input):
-    #input="훈민 정음"
     n=len(input)
     result=""
     for i in range(n):
@@ -27,8 +26,7 @@ def alg3(input):
                 j=h+0x11A8-1    #종성 코드
                 k=chr(j)    #종성 추출
                 result=result+k
-
         else:
             z=x
             result=result+z
-        return result
+    return result

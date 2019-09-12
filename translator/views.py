@@ -6,23 +6,56 @@ from .algorithm1 import alg1
 from .algorithm2 import alg2
 from .algorithm3 import alg3
 
-def translator(request):
+def cover(request):
+    return render(request, 'translator/cover.html')
+
+def translator1(request):
     if request.method == "POST":
         form = InputForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('translated')
+            return redirect('translated1')
     else:
         form = InputForm()
-    return render(request, 'translator/translator.html',{'form':form})
+    return render(request, 'translator/translator1.html',{'form':form})
 
 
-def translated(request):
+def translator2(request):
+    if request.method == "POST":
+        form = InputForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('translated2')
+    else:
+        form = InputForm()
+    return render(request, 'translator/translator2.html',{'form':form})
+
+
+def translator3(request):
+    if request.method == "POST":
+        form = InputForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('translated3')
+    else:
+        form = InputForm()
+    return render(request, 'translator/translator3.html',{'form':form})
+
+
+def translated1(request):
     content = Input.objects.last()
-    print(content)
     output = alg1(str(content))
-    return render(request, 'translator/translated.html', {'output':output})
+    return render(request, 'translator/translated1.html', {'output':output})
 
 
+def translated2(request):
+    content = Input.objects.last()
+    output = alg2(str(content))
+    return render(request, 'translator/translated2.html', {'output':output})
 
-# Create your views here.
+
+def translated3(request):
+    content = Input.objects.last()
+    output = alg3(str(content))
+    print(output)
+    return render(request, 'translator/translated3.html', {'output':output})
