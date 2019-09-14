@@ -9,53 +9,27 @@ from .algorithm3 import alg3
 def cover(request):
     return render(request, 'translator/cover.html')
 
-def translator1(request):
+def translator(request, alg_id):
+    alg_id=str(alg_id)
     if request.method == "POST":
         form = InputForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('translated1')
+            a='/translated'+alg_id
+            return redirect(a)
     else:
         form = InputForm()
-    return render(request, 'translator/translator1.html',{'form':form})
+    return render(request, 'translator/translator'+alg_id+'.html',{'form':form})
 
 
-def translator2(request):
-    if request.method == "POST":
-        form = InputForm(request.POST)
-        if form.is_valid():
-            form.save()
-            return redirect('translated2')
-    else:
-        form = InputForm()
-    return render(request, 'translator/translator2.html',{'form':form})
-
-
-def translator3(request):
-    if request.method == "POST":
-        form = InputForm(request.POST)
-        if form.is_valid():
-            form.save()
-            return redirect('translated3')
-    else:
-        form = InputForm()
-    return render(request, 'translator/translator3.html',{'form':form})
-
-
-def translated1(request):
+def translated(request, alg_id):
+    alg_id=str(alg_id)
     content = Inputs.objects.last()
-    output = alg1(str(content))
-    return render(request, 'translator/translated1.html', {'output':output})
+    if alg_id=='1':
+        output = alg1(str(content))
+    if alg_id=='2':
+        output = alg2(str(content))
+    if alg_id=='3':
+        output = alg3(str(content))
 
-
-def translated2(request):
-    content = Inputs.objects.last()
-    output = alg2(str(content))
-    return render(request, 'translator/translated2.html', {'output':output})
-
-
-def translated3(request):
-    content = Inputs.objects.last()
-    output = alg3(str(content))
-    print(output)
-    return render(request, 'translator/translated3.html', {'output':output})
+    return render(request, 'translator/translated'+alg_id+'.html', {'output':output})
