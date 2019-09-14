@@ -1,8 +1,8 @@
 from django import forms
 
-from .models import Input
+from .models import Inputs
 
 class InputForm(forms.ModelForm):
     class Meta:
-        model = Input
+        model = Inputs
         fields = ('text',)

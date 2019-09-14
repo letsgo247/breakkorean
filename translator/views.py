@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect, get_object_or_404
-from .models import Input
+from .models import Inputs
 from .forms import InputForm
 
 from .algorithm1 import alg1
@@ -43,19 +43,19 @@ def translator3(request):
 
 
 def translated1(request):
-    content = Input.objects.last()
+    content = Inputs.objects.last()
     output = alg1(str(content))
     return render(request, 'translator/translated1.html', {'output':output})
 
 
 def translated2(request):
-    content = Input.objects.last()
+    content = Inputs.objects.last()
     output = alg2(str(content))
     return render(request, 'translator/translated2.html', {'output':output})
 
 
 def translated3(request):
-    content = Input.objects.last()
+    content = Inputs.objects.last()
     output = alg3(str(content))
     print(output)
     return render(request, 'translator/translated3.html', {'output':output})
