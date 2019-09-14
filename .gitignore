@@ -2,6 +2,7 @@
 *~
 __pycache__
 bkvenv
+reference
 db.sqlite3
 /static
 .DS_Store
