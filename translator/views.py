@@ -32,6 +32,4 @@ def translated(request, alg_id):
     if alg_id=='3':
         output = alg3(str(content))
 
-    print(output)
     return render(request, 'translator/translated'+alg_id+'.html', {'output':output})
-    #여기서 대체 무슨 일이 벌어지고 있는거지???!!!ㅠㅠㅠㅠㅠㅠ
