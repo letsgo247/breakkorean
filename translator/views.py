@@ -7,6 +7,11 @@ from .algorithm import alg1, alg2, alg3
 def cover(request):
     return render(request, 'translator/cover.html')
 
+
+def index(request):
+    return render(request, 'translator/index.html')
+
+
 def translator(request, alg_id):
     alg_id=str(alg_id)
     if request.method == "POST":
