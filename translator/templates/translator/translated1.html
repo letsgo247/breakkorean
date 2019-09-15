@@ -8,10 +8,30 @@
   <hr class="divider my-4">
 
     <div class="row justify-content-center">
-      <div class="bg-light text-dark shadow-sm p-3 m-5 col-lg-6 text-left">{{output}}</div>
+      <div id="result" value={{output}} class="bg-light text-dark shadow-sm p-3 m-5 col-lg-6 text-left">{{output}}</div>
     </div>
 
+    <a class="btn btn-success btn-lg" href="/">클립보드에 복사</a>
+    &nbsp;&nbsp;&nbsp;&nbsp;
     <a class="btn btn-primary btn-lg" href="/">처음으로</a>
 </div>
+
+<!-- <input id="foo" value={{output}}> -->
+
+
+<!-- Trigger -->
+<button class="btnn" data-clipboard-target="#result">
+    <img src="assets/clippy.svg" alt="Copy to clipboard">
+</button>
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+    <script>
+      var clipboard = new ClipboardJS( '.btnn' );
+      clipboard.on( 'success', function() {
+        alert( 'Success' );
+      } );
+      clipboard.on( 'error', function() {
+        alert( 'Fail' );
+      } );
+    </script>
 
 {% endblock %}
