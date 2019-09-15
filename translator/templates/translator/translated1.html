@@ -11,26 +11,21 @@
       <div id="result" value={{output}} class="bg-light text-dark shadow-sm p-3 m-5 col-lg-6 text-left">{{output}}</div>
     </div>
 
-    <a class="btn btn-success btn-lg" href="/">클립보드에 복사</a>
+    <button class="btn btn-success btn-lg" id=btn data-clipboard-target="#result">클립보드에 복사</button>
     &nbsp;&nbsp;&nbsp;&nbsp;
     <a class="btn btn-primary btn-lg" href="/">처음으로</a>
 </div>
 
-<!-- <input id="foo" value={{output}}> -->
 
-
-<!-- Trigger -->
-<button class="btnn" data-clipboard-target="#result">
-    <img src="assets/clippy.svg" alt="Copy to clipboard">
-</button>
 <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+
     <script>
-      var clipboard = new ClipboardJS( '.btnn' );
+      var clipboard = new ClipboardJS( '#btn' );
       clipboard.on( 'success', function() {
-        alert( 'Success' );
+        alert( '복사되었습니다' );
       } );
       clipboard.on( 'error', function() {
-        alert( 'Fail' );
+        alert( '실패하였습니다' );
       } );
     </script>
 
