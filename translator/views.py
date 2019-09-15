@@ -8,8 +8,8 @@ def cover(request):
     return render(request, 'translator/cover.html')
 
 
-def index(request):
-    return render(request, 'translator/index.html')
+def select(request):
+    return render(request, 'translator/select.html')
 
 
 def translator(request, alg_id):

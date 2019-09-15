@@ -1,31 +1,81 @@
 {% load static %}
 
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+
   <head>
-    <!-- Required meta tags -->
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
-
+    <meta name="keywords" content="​뷁민정음, 야민정음, 번역기, 한글날, 세종대왕, 한글, 받침 넣기, 된소리 되기, 자모 분리, 에어비앤비체">
+    <meta name="description" content="뷁민정음 번역기">
+    <meta name="author" content="letsgo247">
 
     <title>뷁민정음</title>
+    <link rel="shortcut icon" href="{% static 'translator/img/favicon.png' %}">
 
+    <!-- Font Awesome Icons -->
+    <link href="{% static 'translator/vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet" type="text/css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Jua:400" rel="stylesheet">
+
+    <!-- Plugin CSS -->
+    <link href="{% static 'translator/vendor/magnific-popup/magnific-popup.css' %}" rel="stylesheet">
+
+    <!-- Theme CSS - Includes Bootstrap -->
+    <link href="{% static 'translator/css/creative.min.css' %}" rel="stylesheet">
+
+    <style media="screen">
+      h1 {
+          font-family: "Jua", sans-serif;
+        }
+
+      /* body {
+          font-family: 'Jua', sans-serif !important;
+          } */
+    </style>
 
   </head>
-  <body>
-    <h1><a href=".">뷁민정음 번역기</a></h1>
-
-    {% block content %}
-    {% endblock %}
 
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+  <body id="page-top">
+
+
+    <!-- Masthead -->
+    <header class="masthead pt-1">
+      <div class="container vh-100">
+
+          {% block content %}
+          {% endblock %}
+
+      </div>
+    </header>
+
+
+
+    <footer class="bg-light small">
+      <div class="py-2 text-muted" style="text-align:center;">
+        ⓒ 2019 by <a class="text-muted" href="http://letsgo247.net/contact.html" target="_blank">LETSGO247</a>. All Rights Reserved
+        <br>
+        Powered by <a class="text-muted" href="https://www.djangoproject.com/">Django</a> & <a class="text-muted" href="https://getbootstrap.com/">Bootstrap</a>
+        <br>
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="{% static 'translator/vendor/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'translator/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="{% static 'translator/vendor/jquery-easing/jquery.easing.min.js' %}"></script>
+    <script src="{% static 'translator/vendor/magnific-popup/jquery.magnific-popup.min.js' %}"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="{% static 'translator/js/creative.min.js' %}"></script>
+
   </body>
+
 </html>
