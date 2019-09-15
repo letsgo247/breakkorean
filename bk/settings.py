@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '4=za-!#q29+w4gp0%#2q-(9x_w$v58$f0zso%q=w1j%a$aii^m'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['127.0.0.1', 'www.breakorean.kr', 'breakorean.kr',]
 # Archive ['.pythonanywhere.com',]
