@@ -37,4 +37,4 @@ def translated(request, alg_id):
     if alg_id=='3':
         output = alg3(str(content))
 
-    return render(request, 'translator/translated'+alg_id+'.html', {'output':output})
+    return render(request, 'translator/translated.html', {'output':output})
