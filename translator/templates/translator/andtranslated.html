@@ -11,11 +11,12 @@
       <textarea rows="10" id="result" value={{output}} class="bg-light text-dark shadow-sm p-2 my-3 mx-5 col-sm-8 col-lg-4 text-left">{{output}}</textarea>
     </div>
 
-    <button class="btn btn-success btn-sm" id=btn data-clipboard-target="#result">클립보드에<br><i class="fas fa-copy"></i> 복사</button>
+    <!-- <button class="btn btn-success btn-sm" id=btn data-clipboard-target="#result">클립보드에<br><i class="fas fa-copy"></i> 복사</button> -->
+    <a class="btn btn-primary btn" href="/select"><i class="fas fa-redo-alt"></i> 다시하기</a>
     &nbsp;&nbsp;
-    <a class="btn btn-primary btn" href="/andselect"><i class="fas fa-redo-alt"></i> 다시하기</a>
+    <button class="btn btn-info" id="google">구글 번역기로<br><i class="fas fa-language"></i> 확인</button>
     &nbsp;&nbsp;
-    <a class="btn btn-warning btn" href="/and"><i class="fas fa-home"></i> 처음으로</a>
+    <a class="btn btn-warning btn" href="/"><i class="fas fa-home"></i> 처음으로</a>
 </div>
 
   {% block empty %}
