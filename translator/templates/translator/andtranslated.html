@@ -34,8 +34,9 @@
     //   alert( '실패하였습니다' );
     // } );
 
-    $('#google').click(function() {
-      window.open('https://translate.google.com/#' + $.param({view:'home', op:'translate', sl:'ko', tl:'en', text:$('#result').val()}), '_blank');
+    $('#google').click(function()
+      location.href='https://translate.google.com/#' + $.param({view:'home', op:'translate', sl:'ko', tl:'en', text:$('#result').val()});
+      //window.open('https://translate.google.com/#' + $.param({view:'home', op:'translate', sl:'ko', tl:'en', text:$('#result').val()}), '_blank');
     });
   </script>
 
