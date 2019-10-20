@@ -29,13 +29,13 @@
 <script src="//code.jquery.com/jquery.min.js"></script>
 
 <script>
-  var clipboard = new ClipboardJS( '#btn' );
-  clipboard.on( 'success', function() {
-    alert( '복사되었습니다' );
-  } );
-  clipboard.on( 'error', function() {
-    alert( '실패하였습니다' );
-  } );
+  // var clipboard = new ClipboardJS( '#btn' );
+  // clipboard.on( 'success', function() {
+  //   alert( '복사되었습니다' );
+  // } );
+  // clipboard.on( 'error', function() {
+  //   alert( '실패하였습니다' );
+  // } );
 
   $('#google').click(function() {
     window.open('https://translate.google.com/#' + $.param({view:'home', op:'translate', sl:'ko', tl:'en', text:$('#result').val()}), '_blank');

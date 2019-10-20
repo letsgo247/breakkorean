@@ -12,26 +12,31 @@
     </div>
 
     <!-- <button class="btn btn-success btn-sm" id=btn data-clipboard-target="#result">클립보드에<br><i class="fas fa-copy"></i> 복사</button> -->
-    <a class="btn btn-primary btn" href="/select"><i class="fas fa-redo-alt"></i> 다시하기</a>
+    <a class="btn btn-primary btn" href="/andselect"><i class="fas fa-redo-alt"></i> 다시하기</a>
     &nbsp;&nbsp;
     <button class="btn btn-info btn-sm" id="google">구글 번역기로<br><i class="fas fa-language"></i> 확인</button>
     &nbsp;&nbsp;
-    <a class="btn btn-warning btn" href="/"><i class="fas fa-home"></i> 처음으로</a>
+    <a class="btn btn-warning btn" href="/and"><i class="fas fa-home"></i> 처음으로</a>
 </div>
 
   {% block empty %}
   {% endblock %}
 
-<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+  <script src="//code.jquery.com/jquery.min.js"></script>
 
-    <script>
-      var clipboard = new ClipboardJS( '#btn' );
-      clipboard.on( 'success', function() {
-        alert( '복사되었습니다' );
-      } );
-      clipboard.on( 'error', function() {
-        alert( '실패하였습니다' );
-      } );
-    </script>
+  <script>
+    // var clipboard = new ClipboardJS( '#btn' );
+    // clipboard.on( 'success', function() {
+    //   alert( '복사되었습니다' );
+    // } );
+    // clipboard.on( 'error', function() {
+    //   alert( '실패하였습니다' );
+    // } );
+
+    $('#google').click(function() {
+      window.open('https://translate.google.com/#' + $.param({view:'home', op:'translate', sl:'ko', tl:'en', text:$('#result').val()}), '_blank');
+    });
+  </script>
 
 {% endblock %}
